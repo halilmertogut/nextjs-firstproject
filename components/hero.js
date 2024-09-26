@@ -11,8 +11,7 @@ export default function Hero() {
             src={bgImage}
             alt="Delicious Food"
             width={600}
-            height={600}
-            quality={100}
+            height={100}
             className="rounded-lg shadow-lg"
           />
         </div>

@@ -9,6 +9,8 @@ import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Separator } from "@/components/ui/separator"
+
 
 export default function MealsCard({ meals }) {
   return (
@@ -27,13 +29,16 @@ export default function MealsCard({ meals }) {
               className="rounded-t-lg object-cover w-full h-56"
             />
           </CardHeader>
+
           <CardContent className="p-4">
+            
             <CardTitle className="text-2xl font-bold mb-2">
               {meal.title}
             </CardTitle>
+            <Separator className="my-4" />
+
             <p className="text-gray-600 italic">by {meal.creator}</p>
             <p className="text-gray-600 mb-4 mt-4">{meal.summary}</p>
-            <p className="text-blue-600 underline">{meal.creator_email}</p>
           </CardContent>
           <CardFooter className="p-4 flex justify-between items-center">
             <Button

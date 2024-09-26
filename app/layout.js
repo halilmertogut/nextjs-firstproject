@@ -1,5 +1,14 @@
 import MainHeader from '@/components/main-header';
+import { Nunito } from 'next/font/google';
+
 import './globals.css';
+
+const nunito = Nunito({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-nunito',
+});
+
 
 export const metadata = {
   title: 'NextLevel Food',
@@ -8,7 +17,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${nunito.variable}`}>
       <body>
   
         <MainHeader />

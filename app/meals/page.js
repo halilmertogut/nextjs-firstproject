@@ -4,7 +4,8 @@ import { Input } from "@/components/ui/input";
 import MealsCard from "@/components/meals-card";
 import { Suspense } from "react";
 import LoadingPage from "./loading-out";
-
+import { Share2 } from "lucide-react";
+import Link from "next/link";
 async function Meals() {
   const meals = await getMeals();
   return <MealsCard meals={meals} />;
@@ -39,6 +40,9 @@ export default async function MealsPage() {
               <Button variant="outline" className="text-gray-600">
                 Gluten-Free
               </Button>
+            </div>
+            <div className="mt-4 sm:mt-0">
+              <Button variant="outline" className="text-white bg-red-500 hover:bg-red-500/70"><Share2 className="mr-4"/><Link href="/meals/share">Share your meal!</Link></Button>
             </div>
             <div className="mt-4 sm:mt-0">
               <Input type="text" placeholder="Search.." />
