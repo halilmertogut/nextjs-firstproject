@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/Input";
 import { Label } from "@/components/ui/Label";
@@ -9,7 +8,6 @@ import { submitMeal } from "@/app/lib/actions";
 import MealsFormSubmit from "@/components/meals-form-submit";
 
 export default function ShareMealPage() {
-  const status = useFormStatus();
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="mb-12 text-center">
